@@ -12,7 +12,7 @@ checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfig
             steps {
                 echo 'Hello World'
                 withCredentials([string(credentialsId: 'INFLUXDB_BUCKET', variable: 'INFLUXDB_BUCKET')]) {
-    sh 'echo python3 artillery.py'
+    sh 'python3 artillery.py'
 }
             }
         }
